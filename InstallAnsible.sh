@@ -1,4 +1,4 @@
-#A shell script to install Ansible on Red Hat Linux AMI
+#A shell script to install Ansible on Amazon's Red Hat Linux AMI
 #takes 1 argument, which is the IPv4 address of the slave client to be added to the Ansible hosts file.
 sudo yum update
 sudo yum -y install python3
