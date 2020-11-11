@@ -1,0 +1,19 @@
+#This is a simple eksctl config for the cluster created in the video.
+#Obviously, it could be more complex. Eksctl allows everything from availability zone to storage type to be customized.
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mycluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: myworkers
+    instanceType: t2.micro
+    desiredCapacity: 3
+    minSize: 1
+    maxSize: 5
+    volumeSize: 8
+    ssh:
+      allow: false
